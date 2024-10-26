@@ -1,0 +1,105 @@
+.fui-button-call {
+  display: inline-block;
+  &:hover {
+    .social-link {
+      width: 150px;
+    }
+    .text {
+      display: block;
+      color: #0d7ca8;
+    }
+    .icon {
+      color: white;
+      background-color: #0da8a8;
+    }
+  }
+  .social-link {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    height: 30px;
+    border-radius: 50rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    transition: all 0.3s ease-out;
+    border: 1px solid transparent;
+    animation: turnCircle 1s linear infinite alternate;
+    background-color: white;
+    position: relative;
+    color: #0da8a8;
+    svg {
+      height: 13px;
+    }
+  }
+  .text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-out;
+  }
+}
+
+@keyframes turnCircle {
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: sticky;
+  z-index: 40;
+  top: 0;
+  border-block-width: 1px;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity));
+  --tw-border-opacity: 1;
+  background-color: hsla(0, 0%, 100%, 0.95);
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+    span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-right: 2rem;
+  }
+  .nav-link {
+    transition: linear 0.25s;
+    font-weight: 500;
+    font-size: 15px;
+    &:hover {
+      color: #0da8a8;
+      cursor: pointer;
+      border-bottom: 2px solid #0da8a8;
+      padding-bottom: 5px;
+    }
+  }
+}
